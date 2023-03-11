@@ -1,0 +1,49 @@
+html {
+    font-size: 20px;
+}
+
+header {
+    padding: 1rem;
+}
+
+p,
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    padding: 0 0rem;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    scale: 0;
+    height: 0;
+    transition: all 500ms;
+}
+
+.item {
+    cursor: pointer;
+    border-top: 1px solid black;
+    font-size: 1rem;
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+a:hover img,
+a:focus img,
+a:active img,
+a:visited img {
+    height: auto;
+    scale: 1;
+
+}
