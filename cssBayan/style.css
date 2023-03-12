@@ -1,49 +1,120 @@
 html {
-    font-size: 20px;
+  font-size: 10px;
+}
+body,
+main{
+    margin: 0 auto;
+}
+@media screen and (min-width:320px) and (max-width:819px) {
+    main{
+        width: 320px;
+    }
 }
 
-header {
-    padding: 1rem;
-}
 
 p,
 h1,
 ul,
 li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.list {
-    padding: 0 0rem;
+p{
+    margin-bottom: 1rem;
+}
+
+h1{
+    padding: 1rem;
+    font-size: 3rem;
 }
 
 img {
-    width: 100%;
-    max-width: 500px;
-    scale: 0;
-    height: 0;
-    transition: all 500ms;
+  width: 100%;
+  max-width: 500px;
+  scale: 0;
+  height: 0px;
+transition: all 2s;
 }
 
 .item {
-    cursor: pointer;
-    border-top: 1px solid black;
-    font-size: 1rem;
-    list-style: none;
+  cursor: pointer;
+  border-top: 1px solid black;
+  font-size: 1rem;
+  list-style: none;
 }
 
 a {
-    display: block;
-    text-decoration: none;
-    padding: 1rem;
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+font-size: 3rem;
+color: black;
 }
 
 a:hover img,
 a:focus img,
 a:active img,
 a:visited img {
-    height: auto;
-    scale: 1;
+  height: auto;
+  scale: 1;
+}
 
+@media (hover: none) {
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    scale: 1;
+  }
+  .icon {
+     display: none;
+  }
+}
+@media screen and (min-width:820px) and (max-width:1919px) {
+    main {
+        width: 82rem;
+    }
+
+    .list {
+        text-align: center;
+    }
+
+    a {
+        font-size: 4rem;
+        color: rgb(83, 79, 79);
+    }
+}
+
+@media screen and (min-width:1920px){
+    main {
+        width: 140rem;
+    }
+
+    .list {
+        text-align: center;
+    }
+
+    a {
+        font-size: 5rem;
+        color: rgb(185, 76, 76);
+    }
+}
+
+.icon{
+    content: url(../cssBayan/img/menu.svg);
+    width: 5rem;
+    height: 5rem;
+    transition: all 1000ms;
+}
+
+a:hover .icon{
+    content: url(../cssBayan/img/cross.svg);
+    width: 5rem;
+    height: 5rem;
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
 }
