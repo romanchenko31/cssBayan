@@ -2,17 +2,17 @@ html {
   font-size: 10px;
 }
 body,
-main{
-    margin: 0 auto;
+main {
+  margin: 0 auto;
 }
-@media screen and (min-width:320px) and (max-width:819px) {
-    main{
-        width: 32rem;
-    }
+@media screen and (min-width: 320px) and (max-width: 819px) {
+  main {
+    width: 32rem;
+  }
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 p,
 h1,
@@ -22,50 +22,34 @@ li {
   padding: 0;
 }
 
-p{
-    margin-bottom: 1rem;
+p {
+  margin-bottom: 1rem;
 }
 
-h1{
-    padding: 1rem;
-    font-size: 3rem;
+h1 {
+  padding: 1rem;
+  font-size: 2.4rem;
 }
 
-main:hover .list .link{
+main:hover .list .link {
   color: black;
 }
 
-main:hover .list .link .icon {
-    content: url(../cssBayan/img/menu.svg);
-    width: 5rem;
-    height: 5rem;
-}
-
-main:hover .list .link:hover .icon,
- main:hover .list .link:focus .icon{
-    content: url(../cssBayan/img/cross.svg);
-    width: 5rem;
-    height: 5rem;
-    
-}
-
-.link:focus {
-
-    color: black;
-}
-
 main:hover .list .link:active {
-    color: blue;
-    opacity:0.7;
+  color: blue;
+  opacity: 0.7;
 }
 
-img {
+
+
+.img {
   width: 100%;
-  overflow: hidden;
   max-width: 50rem;
   height: 0;
-transition: height 500ms ease;
+  transition: height 500ms ease;
 }
+
+
 
 .item {
   cursor: pointer;
@@ -74,75 +58,119 @@ transition: height 500ms ease;
   list-style: none;
 }
 
-.link{
+
+.link {
   display: block;
   text-decoration: none;
   padding: 1rem;
-font-size: 3rem;
-color: blue;
+  font-size: 2rem;
+  color: blue;
+}
+.link:focus {
+    color: black;
+}
+
+.link:hover .icon {
+  height: 5rem;
 }
 
 
 
-.link:hover img,
-.link:focus img,
-.link:active img,
-.link:visited img {
-  height: 50rem;
+.item .link:hover .img,
+.item .link:focus .img,
+.item .link:active .img,
+.item .link:visited .img {
+  height: 20rem;
 }
 
-@media (hover :hover) {
-  
-    .title-wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
+
+@media (hover: hover) {
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon {
+      height: 0;
+      transition: height 500ms ease;
+  }
+
+  main:hover .list .link .icon {
+      content: url(../cssBayan/img/menu.svg);
+      width: 5rem;
+      height: 5rem;
+  }
+
+  main:hover .list .link:hover .icon,
+  main:hover .list .link:focus .icon {
+      content: url(../cssBayan/img/cross.svg);
+      width: 5rem;
+      height: 5rem;
+  }
+     
 }
 
 @media (hover: none) {
-  img {
-    width: 100%;
-    max-width: 50rem;
-    height: auto;
+
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item,
+   main {
+      cursor: none;
   }
   .icon {
-     display: none;
+    content: url(../cssBayan/img/menu.svg);
+        width: 5rem;
+        height: 5rem;
   }
-  .title-wrapper{
-    justify-content: center;
+  .link:hover .icon{
+    content: url(../cssBayan/img/cross.svg);
+        width: 5rem;
+        height: 5rem;
   }
 }
-@media screen and (min-width:820px) and (max-width:1919px) {
-    main {
-        width: 82rem;
-    }
-     
-    .list {
-        text-align: center;
-    }
+@media screen and (min-width: 820px) and (max-width: 1919px) {
+  main {
+    width: 82rem;
+  }
 
-    .link,
-    h1{
-        font-size: 4rem;
-    }
+  .list {
+    text-align: center;
+  }
+
+  .link,
+  h1 {
+    font-size: 2.7rem;
+  }
+ .item .link:hover .img,
+ .item .link:focus .img,
+  .item .link:active .img,
+ .item .link:visited .img {
+      height: 40rem;
+  }
 }
 
-@media screen and (min-width:1920px){
-    main {
-        width: 140rem;
-    }
+@media screen and (min-width: 1920px) {
+  main {
+    width: 140rem;
+  }
 
-    .list {
-        text-align: center;
-    }
+  .list {
+    text-align: center;
+  }
 
-    .link,
-    h1 {
-        font-size: 5rem;
-    }
+  .link{
+    font-size: 4rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  .item .link:hover .img,
+  .item .link:focus .img,
+  .item .link:active .img,
+ .item .link:visited .img {
+      height: 60rem;
+  }
 }
-
-
-
-
-
