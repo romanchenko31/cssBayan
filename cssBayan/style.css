@@ -1,0 +1,176 @@
+html {
+  font-size: 62.5%;
+}
+body,
+main {
+  margin: 0 auto;
+}
+@media screen and (min-width: 320px) and (max-width: 819px) {
+  main {
+    width: 32rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+p,
+h1,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  padding: 1rem;
+  font-size: 2.4rem;
+}
+
+main:hover .list .link {
+  color: black;
+}
+
+main:hover .list .link:active {
+  color: blue;
+  opacity: 0.7;
+}
+
+
+
+.img {
+  width: 100%;
+  max-width: 50rem;
+  height: 0;
+  transition: height 500ms ease;
+}
+
+
+
+.item {
+  cursor: pointer;
+  border-top: 1px solid black;
+  font-size: 1rem;
+  list-style: none;
+}
+
+
+.link {
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 2rem;
+  color: blue;
+}
+.link:focus {
+    color: black;
+}
+
+.link:hover .icon {
+  height: 5rem;
+}
+
+
+
+.item .link:hover .img,
+.item .link:focus .img,
+.item .link:active .img,
+.item .link:visited .img {
+  height: 20rem;
+}
+
+
+@media (hover: hover) {
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon {
+      height: 0;
+      transition: height 500ms ease;
+  }
+
+  main:hover .list .link .icon {
+      content: url(../cssBayan/img/menu.svg);
+      width: 5rem;
+      height: 5rem;
+  }
+
+  main:hover .list .link:hover .icon,
+  main:hover .list .link:focus .icon {
+      content: url(../cssBayan/img/cross.svg);
+      width: 5rem;
+      height: 5rem;
+  }
+     
+}
+
+@media (hover: none) {
+
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item,
+   main {
+      cursor: none;
+  }
+  .icon {
+    content: url(../cssBayan/img/menu.svg);
+        width: 5rem;
+        height: 5rem;
+  }
+  .link:hover .icon{
+    content: url(../cssBayan/img/cross.svg);
+        width: 5rem;
+        height: 5rem;
+  }
+}
+@media screen and (min-width: 820px) and (max-width: 1919px) {
+  main {
+    width: 82rem;
+  }
+
+  .list {
+    text-align: center;
+  }
+
+  .link,
+  h1 {
+    font-size: 2.7rem;
+  }
+ .item .link:hover .img,
+ .item .link:focus .img,
+  .item .link:active .img,
+ .item .link:visited .img {
+      height: 40rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  main {
+    width: 140rem;
+  }
+
+  .list {
+    text-align: center;
+  }
+
+  .link{
+    font-size: 4rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  .item .link:hover .img,
+  .item .link:focus .img,
+  .item .link:active .img,
+ .item .link:visited .img {
+      height: 60rem;
+  }
+}
